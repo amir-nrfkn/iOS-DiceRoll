@@ -9,12 +9,22 @@
 import UIKit
 
 class ViewController: UIViewController {
+    // IBOutlet allows to refer to UI elements (IB: interface builder)
+    // IBOutlet: code interacts with UI
+    // IBAction: UI interacts with code
+    // a general rule: Who.What = Value
+    
+    @IBOutlet weak var diceImageView1: UIImageView!
+    @IBOutlet weak var diceImageView2: UIImageView!
+    let diceArr = [#imageLiteral(resourceName: "DiceOne"), #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix")]
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBAction func rollButtonPress(_ sender: UIButton) {
+        diceImageView1.image = diceArr.randomElement()
+        diceImageView2.image = diceArr.randomElement()
+        
+        // alternatively, can generate random number with:
+        // Int.random(in: 0...6)
     }
-
-
+    
 }
 
