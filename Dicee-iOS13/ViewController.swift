@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     let diceArr = [#imageLiteral(resourceName: "DiceOne"), #imageLiteral(resourceName: "DiceTwo"), #imageLiteral(resourceName: "DiceThree"), #imageLiteral(resourceName: "DiceFour"), #imageLiteral(resourceName: "DiceFive"), #imageLiteral(resourceName: "DiceSix")]
 
     @IBAction func rollButtonPress(_ sender: UIButton) {
+        print("button pressed")
         diceImageView1.image = diceArr.randomElement()
         diceImageView2.image = diceArr.randomElement()
         
