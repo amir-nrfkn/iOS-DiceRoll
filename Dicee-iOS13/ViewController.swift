@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         diceImageView2.image = diceArr.randomElement()
         
         // alternatively, can generate random number with:
-        // Int.random(in: 0...6)
+        // Int.random(in: 0...5)
     }
     
 }
